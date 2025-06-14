@@ -1,0 +1,19 @@
+curl -k -u 'admin@rl.org@QFJ5GWf' \
+ -H "Content-Type: application/json" \
+ -X POST https://re-cluster1.ps-redislabs.org:9443/v1/bdbs \
+ -d '{
+    "name": "semantic-routing-db",
+    "type": "redis",
+    "memory_size": 2147483648,
+    "port": 12426,
+    "module_list": [
+      {
+        "module_name": "search",
+        "module_args": ""
+      },
+      {
+        "module_name": "ReJSON",
+        "module_args": ""
+      }
+    ]
+  }' 
